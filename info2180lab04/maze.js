@@ -25,6 +25,7 @@ function boundaryLeave() {
 
 function startClick() {
     win = true;
+    $("status").update("");
     var boundaries = $$("div#maze div.boundary");
     for (var i = 0; i < boundaries.length; i++) {
         boundaries[i].removeClassName("youlose");
@@ -33,8 +34,8 @@ function startClick() {
 
 function reachEnd() {
     if(win) {
-        alert("You win!");
+        $("status").update("You win!");
     } else {
-        alert("You lose!");
+        $("status").update("You lose!");
     }
 }
